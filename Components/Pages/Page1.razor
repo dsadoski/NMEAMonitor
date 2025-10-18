@@ -1,0 +1,37 @@
+﻿@inject UdpListenerService UdpService
+
+<!--<h3>Page1</h3>
+<p>This is the first page.</p>-->
+<h3>UDP Messages:</h3>
+
+<ul>
+    @foreach (var msg in messages)
+    {
+        <li>@msg</li>
+    }
+</ul>
+@code {
+    private List<string> messages = new();
+
+    protected override void OnInitialized()
+    {
+        UdpService.OnMessageReceived += HandleUdpMessage;
+        UdpService.Start();
+    }
+
+    private void HandleUdpMessage(string msg)
+    {
+        InvokeAsync(() =>
+        {
+            messages.Add(msg);
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose()
+    {
+        UdpService.OnMessageReceived -= HandleUdpMessage;
+        UdpService.Stop();
+    }
+}
+

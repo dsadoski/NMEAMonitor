@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\source\\NMEAMon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\models\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:models\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\services\\nmeaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:services\\nmeaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\services\\stringparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:services\\stringparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\components\\pages\\page3.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:components\\pages\\page3.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\models\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:models\\setup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\components\\pages\\page1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:components\\pages\\page1.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\source\\NMEAMon\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\services\\udplistenerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:services\\udplistenerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\components\\pages\\pager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:components\\pages\\pager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|c:\\source\\nmeamon\\components\\pages\\page2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{154EEF38-A438-4330-910C-5828324BD92C}|NMEAMon.csproj|solutionrelative:components\\pages\\page2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Record.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Models\\Record.cs",
+              "RelativeDocumentMoniker": "Models\\Record.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\Models\\Record.cs",
+              "RelativeToolTip": "Models\\Record.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAjwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T22:32:21.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StringParser.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Services\\StringParser.cs",
+              "RelativeDocumentMoniker": "Services\\StringParser.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\Services\\StringParser.cs",
+              "RelativeToolTip": "Services\\StringParser.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T22:14:40.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Setup.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Models\\Setup.cs",
+              "RelativeDocumentMoniker": "Models\\Setup.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\Models\\Setup.cs",
+              "RelativeToolTip": "Models\\Setup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T22:03:16.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NmeaService.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Services\\NmeaService.cs",
+              "RelativeDocumentMoniker": "Services\\NmeaService.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\Services\\NmeaService.cs",
+              "RelativeToolTip": "Services\\NmeaService.cs",
+              "ViewState": "AgIAADUBAAAAAAAAAAAWwEcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T22:02:44.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T21:43:27.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UdpListenerService.cs",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Services\\UdpListenerService.cs",
+              "RelativeDocumentMoniker": "Services\\UdpListenerService.cs",
+              "ToolTip": "C:\\source\\NMEAMon\\Services\\UdpListenerService.cs",
+              "RelativeToolTip": "Services\\UdpListenerService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswB8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T21:16:21.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\source\\NMEAMon\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T21:09:02.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Pager.razor",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Components\\Pages\\Pager.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Pager.razor",
+              "ToolTip": "C:\\source\\NMEAMon\\Components\\Pages\\Pager.razor",
+              "RelativeToolTip": "Components\\Pages\\Pager.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T19:50:52.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Page3.razor",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Components\\Pages\\Page3.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Page3.razor",
+              "ToolTip": "C:\\source\\NMEAMon\\Components\\Pages\\Page3.razor",
+              "RelativeToolTip": "Components\\Pages\\Page3.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T19:48:17.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Page2.razor",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Components\\Pages\\Page2.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Page2.razor",
+              "ToolTip": "C:\\source\\NMEAMon\\Components\\Pages\\Page2.razor",
+              "RelativeToolTip": "Components\\Pages\\Page2.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T19:48:04.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Page1.razor",
+              "DocumentMoniker": "C:\\source\\NMEAMon\\Components\\Pages\\Page1.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Page1.razor",
+              "ToolTip": "C:\\source\\NMEAMon\\Components\\Pages\\Page1.razor",
+              "RelativeToolTip": "Components\\Pages\\Page1.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T19:47:37.001Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
