@@ -19,6 +19,7 @@ namespace NMEAMon.Models
         public double headingMag;
         public double headingTrue;
         public double SOG;
+        public double COG;
         public double SOW;
         public double windTrueDir;
         public double windTrueSpeed;
@@ -26,11 +27,13 @@ namespace NMEAMon.Models
         public double windAppSpeed;
         public double VPWSPD;
         public int POLARDATA;
+        public string ErrMessage;
 
 
 
         public void RecordNew()
         {
+            ErrMessage = string.Empty;
 
             ID = 0;
             userId = 0;
@@ -42,6 +45,7 @@ namespace NMEAMon.Models
             headingMag = 0;
             headingTrue = 0;
             SOG = 0;
+            COG = 0;
             SOW = 0;
             windTrueDir = 0;
             windTrueSpeed = 0;
@@ -66,12 +70,14 @@ namespace NMEAMon.Models
             P.headingMag = headingMag;
             P.headingTrue = headingTrue;
             P.SOG = SOG;
+            P.COG = COG;
             P.SOW = SOW;
             P.windTrueDir = windTrueDir;
             P.windTrueSpeed = windTrueSpeed;
             P.windAppDir = windAppDir;
             P.windAppSpeed = windAppSpeed;
             P.VPWSPD = VPWSPD;
+            P.ErrMessage = ErrMessage;
 
             return P;
 

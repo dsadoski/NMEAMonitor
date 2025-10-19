@@ -1,20 +1,71 @@
-﻿@inject UdpListenerService UdpService
+﻿@using NMEAMon.Models
+@using NMEAMon.Services
+
+@inject UdpListenerService UdpService
+@inject NmeaService  nmeaService;
 
 <!--<h3>Page1</h3>
 <p>This is the first page.</p>-->
 <h3>UDP Messages:</h3>
 
 <ul>
-    @foreach (var msg in messages)
-    {
-        <li>@msg</li>
-    }
+    <span>	latitude	</span>
+    <span>@record.latitude	</span><br />    
+    <span>	longitude	</span>
+    <span>@record.latitude	</span>
+    <br />    
+    <span>	time	</span>
+    <span>@record.time	</span>
+    <br />
+    <span>	depth	</span>
+    <span>@record.depth	</span>
+    <br />
+    <span>	headingMag	</span>
+    <span>@record.headingMag	</span>
+    <br />
+    <span>	headingTrue	</span>
+    <span>@record.headingTrue	</span>
+    <br />
+    <span>	SOG	</span>
+    <span>@record.SOG	</span>
+    <br />
+    <span>	COG	</span>
+    <span>@record.COG	</span>
+    <br />
+    <span>	SOW	</span>
+    <span>@record.SOW	</span>
+    <br />
+    <span>	windTrueDir	</span>
+    <span>@record.windTrueDir	</span>
+    <br />
+    <span>	windTrueSpeed	</span>
+    <span>@record.windTrueSpeed	</span>
+    <br />
+    <span>	windAppDir	</span>
+    <span>@record.windAppDir	</span>
+    <br />
+    <span>	windAppSpeed	</span>
+    <span>@record.windAppSpeed	</span>
+    <br />
+    <span>	VPWSPD	</span>
+    <span>@record.VPWSPD	</span>
+    <br />
+    <span>	POLARDATA	</span>
+    <span>@record.POLARDATA	</span>
+    <br />
+    <span>Error Message</span>
+    <span>@record.ErrMessage</span>
+
+
+
 </ul>
 @code {
     private List<string> messages = new();
+    private Record record;
 
     protected override void OnInitialized()
     {
+        record = new Record();
         UdpService.OnMessageReceived += HandleUdpMessage;
         UdpService.Start();
     }
@@ -23,6 +74,7 @@
     {
         InvokeAsync(() =>
         {
+            record = nmeaService.ParseSentence(msg, record);
             messages.Add(msg);
             StateHasChanged();
         });

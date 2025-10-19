@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using NMEAMon.Models;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -11,6 +12,7 @@ public class UdpListenerService
     private CancellationTokenSource? _cts;
 
     public event Action<string>? OnMessageReceived;
+    Record record;
 
     public UdpListenerService(int port)
     {

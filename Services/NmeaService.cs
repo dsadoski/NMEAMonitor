@@ -17,8 +17,6 @@ namespace NMEAMon.Services
         {
             S = s.Copy();
             CalcWind = false;
-
-
         }
 
         public Record ParseSentence(string message, Record LV)
@@ -39,7 +37,7 @@ namespace NMEAMon.Services
 
 
 
-            switch(txt)
+            switch (txt)
             {
 
                 case "GLL":
@@ -54,23 +52,35 @@ namespace NMEAMon.Services
                 case "HDT":
                     LV = NMEA_HDT(NSTR, LV);
                     break;
-                case "MWD": 
+                case "MWD":
                     LV = NMEA_MWD(NSTR, LV);
                     break;
-                case "MWV": 
+                case "MWV":
                     LV = NMEA_MWV(NSTR, LV);
                     break;
-                case "VHW": 
+                case "VHW":
                     LV = NMEA_VHW(NSTR, LV);
                     break;
-                case "VPW": 
+                case "VPW":
                     LV = NMEA_VPW(NSTR, LV);
+                    break;
+
+                case "VTG":
+                    LV = NMEA_VTG(NSTR, LV);
+                    break;
+
+                case "WND":
+                    LV = NMEA_VTG(NSTR, LV);
+                    break;
+
+                default:
+                    LV.ErrMessage = txt;
                     break;
 
             }
 
 
-            
+
 
 
             // ADD RMC Sentence
@@ -330,6 +340,68 @@ namespace NMEAMon.Services
 
 
             if (S.UseGPSHEADING == false && S.UseGPSSOG == false) LV.VPWSPD = DoubleGet(ARY[1]);
+
+
+            return LV.Copy();
+        }
+
+        public Record NMEA_VTG(string[] ARY, Record LV)
+        {
+            /*Track made good and speed over ground*/
+            if (ARY.Length < 3) return LV.Copy();
+
+            double T;
+
+            if (S.UseGPSHEADING == false)
+            {
+                LV.COG = DoubleGet(ARY[1]);
+
+                while (LV.COG > 360)
+                {
+                    LV.COG = LV.COG - 360;
+                }
+
+                while (LV.COG <0 )
+                {
+                    LV.COG = LV.COG + 360;
+                }
+
+            }
+            if(S.UseGPSSOG == false)
+            {
+                LV.SOG = DoubleGet(ARY[5]);
+            }
+
+
+            return LV.Copy();
+        }
+
+        public Record NMEA_WND(string[] ARY, Record LV)
+        {
+            /*Track made good and speed over ground*/
+            if (ARY.Length < 3) return LV.Copy();
+
+            double T;
+
+            if (S.UseGPSHEADING == false)
+            {
+                LV.COG = DoubleGet(ARY[1]);
+
+                while (LV.COG > 360)
+                {
+                    LV.COG = LV.COG - 360;
+                }
+
+                while (LV.COG < 0)
+                {
+                    LV.COG = LV.COG + 360;
+                }
+
+            }
+            if (S.UseGPSSOG == false)
+            {
+                LV.SOG = DoubleGet(ARY[5]);
+            }
 
 
             return LV.Copy();
