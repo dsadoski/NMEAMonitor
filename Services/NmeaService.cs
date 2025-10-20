@@ -126,7 +126,7 @@ namespace NMEAMon.Services
             for (i = 1; i < ARY.Length - 1; i++)
             {
 
-                if (ARY[i + 1]=="f")
+                if (ARY[i + 1] == "f")
                 {
                     LV.depth = DoubleGet(ARY[i]);
 
@@ -238,7 +238,7 @@ namespace NMEAMon.Services
                 return LV.Copy();
             }
 
-            if (ARY[2] == "R" )
+            if (ARY[2] == "R")
             {
                 //TV1.append("Failed on R\n");
                 return LV.Copy();//only want relative;
@@ -361,13 +361,13 @@ namespace NMEAMon.Services
                     LV.COG = LV.COG - 360;
                 }
 
-                while (LV.COG <0 )
+                while (LV.COG < 0)
                 {
                     LV.COG = LV.COG + 360;
                 }
 
             }
-            if(S.UseGPSSOG == false)
+            if (S.UseGPSSOG == false)
             {
                 LV.SOG = DoubleGet(ARY[5]);
             }
@@ -422,7 +422,7 @@ namespace NMEAMon.Services
     <CR><LF>		End of message termination*/
             if (ARY.Length < 10) return LV.Copy();
 
-            if (ARY[6]=="V") return LV.Copy();//not valid data
+            if (ARY[6] == "V") return LV.Copy();//not valid data
 
 
             if (S.UseGPSHEADING == false)
@@ -438,6 +438,10 @@ namespace NMEAMon.Services
 
             return LV.Copy();
         }
+        public void Parse2k(NMEA2000 n2k)
+        {
 
+        }
     }
+
 }

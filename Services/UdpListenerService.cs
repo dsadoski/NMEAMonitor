@@ -32,6 +32,7 @@ public class UdpListenerService
                 {
                     var result = await _udpClient.ReceiveAsync();
                     var message = Encoding.UTF8.GetString(result.Buffer);
+                    var nmea2000Message = new NMEA2000(message);
                     OnMessageReceived?.Invoke(message);
                 }
             }

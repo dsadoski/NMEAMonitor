@@ -110,6 +110,52 @@ namespace NMEAMon.Services
 
         }
 
+        public List<string> CommaListToStringList(string txt)
+        {
+            int i;
+            string tmp = "";
+            int CNT = 0;
+            
+            List<string> result = new List<string>();
+
+            if (txt.Length == 1 && txt[0] == ' ') return new List<string>();
+
+            for (i = 0; i < txt.Length; i++)
+            {
+                if (txt[i] == ',')
+                {
+                    tmp = "";
+                    CNT++;
+                }
+                else tmp += txt[i];
+            }
+            if (tmp.Length > 0) CNT++;
+
+            
+            tmp = "";
+            CNT = 0;
+
+            for (i = 0; i < txt.Length; i++)
+            {
+                if (txt[i] == ',')
+                {
+                    result.Add(tmp);
+                    tmp = "";
+                    CNT++;
+                }
+                else tmp += txt[i];
+            }
+            if (tmp.Length > 0 )
+            {
+                result.Add(tmp);
+            }
+
+
+            return result;
+
+
+        }
+
 
         public double[] TildaListToDoubles(string txt)
         {
