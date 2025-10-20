@@ -12,10 +12,10 @@
     <span>	latitude	</span>
     <span>@record.latitude	</span><br />    
     <span>	longitude	</span>
-    <span>@record.latitude	</span>
+    <span>@record.longitude	</span>
     <br />    
     <span>	time	</span>
-    <span>@record.time	</span>
+    <span>@time.ToShortDateString(), @time.ToShortTimeString()	</span>
     <br />
     <span>	depth	</span>
     <span>@record.depth	</span>
@@ -53,6 +53,12 @@
     <span>	POLARDATA	</span>
     <span>@record.POLARDATA	</span>
     <br />
+    <span>Water Tempt</span>
+    <span>@record.waterTemp</span>
+    <br
+    <span>Voltage</span>
+    <span>@record.voltage</span>
+    <br />
     <span>Error Message</span>
     <span>@record.ErrMessage</span>
 
@@ -62,6 +68,7 @@
 @code {
     private List<string> messages = new();
     private Record record;
+    private DateTime time;
 
     protected override void OnInitialized()
     {
@@ -70,10 +77,12 @@
         UdpService.Start();
     }
 
-    private void HandleUdpMessage(string msg)
+    private void HandleUdpMessage(Record n2krecord)
     {
         InvokeAsync(() =>
         {
+            record = n2krecord;
+            time = new DateTime(record.time);
             //record = nmeaService.ParseSentence(msg, record);
             //messages.Add(msg);
             StateHasChanged();

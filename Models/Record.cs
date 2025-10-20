@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +29,8 @@ namespace NMEAMon.Models
         public double windAppSpeed;
         public double VPWSPD;
         public int POLARDATA;
+        public double waterTemp;
+        public double voltage;
         public string ErrMessage;
 
 
@@ -53,6 +57,8 @@ namespace NMEAMon.Models
             windAppSpeed = 0;
             VPWSPD = 0;
             POLARDATA = 0;
+            waterTemp=0;
+            voltage= 0;
 
 
         }
@@ -78,6 +84,8 @@ namespace NMEAMon.Models
             P.windAppSpeed = windAppSpeed;
             P.VPWSPD = VPWSPD;
             P.ErrMessage = ErrMessage;
+            P.waterTemp = waterTemp;
+            P.voltage = voltage;
 
             return P;
 

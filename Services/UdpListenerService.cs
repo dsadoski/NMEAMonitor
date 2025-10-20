@@ -1,55 +1,66 @@
-﻿using NMEAMon.Models;
+﻿
+using NMEAMon.Models;
+
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-public class UdpListenerService
+
+namespace NMEAMon.Services
 {
-    private readonly int _port;
-    private UdpClient? _udpClient;
-    private CancellationTokenSource? _cts;
-
-    public event Action<string>? OnMessageReceived;
-    Record record;
-
-    public UdpListenerService(int port)
+    public class UdpListenerService
     {
-        _port = port;
-    }
+        private readonly int _port;
+        private UdpClient? _udpClient;
+        private CancellationTokenSource? _cts;
 
-    public void Start()
-    {
-        _cts = new CancellationTokenSource();
-        _udpClient = new UdpClient(_port);
+        public event Action<Record>? OnMessageReceived;
+        Record record;
 
-        Task.Run(async () =>
+        public UdpListenerService(int port)
         {
-            try
-            {
-                while (!_cts.IsCancellationRequested)
-                {
-                    var result = await _udpClient.ReceiveAsync();
-                    var message = Encoding.UTF8.GetString(result.Buffer);
-                    var nmea2000Message = new NMEA2000(message);
-                    OnMessageReceived?.Invoke(message);
-                }
-            }
-            catch (ObjectDisposedException)
-            {
-                // Normal when stopping the listener
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"UDP Listener Error: {ex.Message}");
-            }
-        });
-    }
+            _port = port;
+        }
 
-    public void Stop()
-    {
-        _cts?.Cancel();
-        _udpClient?.Close();
+        public void Start()
+        {
+            _cts = new CancellationTokenSource();
+            _udpClient = new UdpClient(_port);
+
+            N2KService n2KService = new N2KService();
+
+
+            Task.Run(async () =>
+            {
+                try
+                {
+                    while (!_cts.IsCancellationRequested)
+                    {
+                        var result = await _udpClient.ReceiveAsync();
+                        var message = Encoding.UTF8.GetString(result.Buffer);
+                        NMEA2000 nMEA2000Message = new NMEA2000(message);
+                        var record = n2KService.N2KParse(nMEA2000Message.PGN, nMEA2000Message.byteArray);
+                        
+                        OnMessageReceived?.Invoke(record);
+                    }
+                }
+                catch (ObjectDisposedException)
+                {
+                    // Normal when stopping the listener
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"UDP Listener Error: {ex.Message}");
+                }
+            });
+        }
+
+        public void Stop()
+        {
+            _cts?.Cancel();
+            _udpClient?.Close();
+        }
     }
 }
