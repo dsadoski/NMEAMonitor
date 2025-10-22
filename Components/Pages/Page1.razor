@@ -7,7 +7,9 @@
 <!--<h3>Page1</h3>
 <p>This is the first page.</p>-->
 <h3>UDP Messages:</h3>
-
+<table>
+    <tr>
+        <td style="vertical-align: top;">
 <ul>
     <span>	latitude	</span>
     <span>@record.latitude	</span><br />    
@@ -61,10 +63,19 @@
     <br />
     <span>Error Message</span>
     <span>@record.ErrMessage</span>
+            </ul>
+        </td>
+        <td style="vertical-align: top;">
+            <ul>
+                @foreach (var msg in messages)
+                {
+                    <li>@msg</li>
+                }
+            </ul>
+            </td>
+    </tr>
+</table>
 
-
-
-</ul>
 @code {
     private List<string> messages = new();
     private Record record;
@@ -83,7 +94,14 @@
         {
             record = n2krecord;
             time = new DateTime(record.time);
-            //record = nmeaService.ParseSentence(msg, record);
+            //record = nmeaService.ParseSentence(msg);
+            if(record.ErrMessage != string.Empty)
+            {
+                if (!messages.Contains(record.ErrMessage))
+                {
+                    messages.Add(record.ErrMessage);
+                }
+            }
             //messages.Add(msg);
             StateHasChanged();
         });
