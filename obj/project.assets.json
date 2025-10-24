@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     "net9.0-android35.0": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -698,10 +722,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -717,7 +741,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -2610,6 +2634,30 @@
       }
     },
     "net9.0-android35.0/android-arm64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -3306,10 +3354,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -3325,7 +3373,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -5218,6 +5266,30 @@
       }
     },
     "net9.0-android35.0/android-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -5914,10 +5986,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -5933,7 +6005,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -7826,6 +7898,30 @@
       }
     },
     "net9.0-android35.0/iossimulator-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -8522,10 +8618,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -8541,7 +8637,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -10434,6 +10530,30 @@
       }
     },
     "net9.0-android35.0/maccatalyst-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -11130,10 +11250,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -11149,7 +11269,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -13042,6 +13162,30 @@
       }
     },
     "net9.0-android35.0/win10-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "GoogleGson/2.13.0.1": {
         "type": "package",
         "dependencies": {
@@ -13738,10 +13882,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Xamarin.AndroidX.Browser": "1.8.0.9",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.3-alpha07",
           "Xamarin.Google.Crypto.Tink.Android": "1.17.0.1"
@@ -13757,7 +13901,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-android35.0/Microsoft.Maui.Graphics.dll": {
@@ -15650,6 +15794,30 @@
       }
     },
     "net9.0-ios18.5": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -16322,10 +16490,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -16338,7 +16506,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -16366,6 +16534,30 @@
       }
     },
     "net9.0-ios18.5/android-arm64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -17038,10 +17230,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -17054,7 +17246,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -17082,6 +17274,30 @@
       }
     },
     "net9.0-ios18.5/android-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -17754,10 +17970,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -17770,7 +17986,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -17798,6 +18014,30 @@
       }
     },
     "net9.0-ios18.5/iossimulator-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -18470,10 +18710,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -18486,7 +18726,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -18514,6 +18754,30 @@
       }
     },
     "net9.0-ios18.5/maccatalyst-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -19186,10 +19450,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -19202,7 +19466,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -19230,6 +19494,30 @@
       }
     },
     "net9.0-ios18.5/win10-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -19902,10 +20190,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Essentials.dll": {
@@ -19918,7 +20206,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-ios18.0/Microsoft.Maui.Graphics.dll": {
@@ -19946,6 +20234,30 @@
       }
     },
     "net9.0-maccatalyst18.5": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -20618,10 +20930,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -20634,7 +20946,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -20662,6 +20974,30 @@
       }
     },
     "net9.0-maccatalyst18.5/android-arm64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -21334,10 +21670,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -21350,7 +21686,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -21378,6 +21714,30 @@
       }
     },
     "net9.0-maccatalyst18.5/android-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -22050,10 +22410,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -22066,7 +22426,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -22094,6 +22454,30 @@
       }
     },
     "net9.0-maccatalyst18.5/iossimulator-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -22766,10 +23150,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -22782,7 +23166,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -22810,6 +23194,30 @@
       }
     },
     "net9.0-maccatalyst18.5/maccatalyst-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -23482,10 +23890,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -23498,7 +23906,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -23526,6 +23934,30 @@
       }
     },
     "net9.0-maccatalyst18.5/win10-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -24198,10 +24630,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82"
+          "Microsoft.Maui.Graphics": "9.0.120"
         },
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Essentials.dll": {
@@ -24214,7 +24646,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "compile": {
           "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Graphics.dll": {
@@ -24242,6 +24674,30 @@
       }
     },
     "net9.0-windows10.0.19041": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -24962,10 +25418,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -24979,11 +25435,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -25047,7 +25504,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -25208,6 +25665,30 @@
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -25914,10 +26395,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -25931,11 +26412,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -25985,7 +26467,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -26112,6 +26594,30 @@
       }
     },
     "net9.0-windows10.0.19041/android-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -26818,10 +27324,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -26835,11 +27341,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -26889,7 +27396,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -27016,6 +27523,30 @@
       }
     },
     "net9.0-windows10.0.19041/iossimulator-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -27722,10 +28253,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -27739,11 +28270,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -27793,7 +28325,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -27920,6 +28452,30 @@
       }
     },
     "net9.0-windows10.0.19041/maccatalyst-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -28626,10 +29182,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -28643,11 +29199,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -28697,7 +29254,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -28824,6 +29381,30 @@
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
+      "Blazor.Extensions.Canvas/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "3.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll": {},
+          "lib/netstandard2.1/Blazor.Extensions.Canvas.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor.Extensions.Canvas.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Extensions.Canvas.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -29533,10 +30114,10 @@
           "buildTransitive/net9.0-windows10.0.17763.0/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/9.0.82": {
+      "Microsoft.Maui.Essentials/9.0.120": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "9.0.82",
+          "Microsoft.Maui.Graphics": "9.0.120",
           "Microsoft.Web.WebView2": "1.0.3179.45"
         },
         "compile": {
@@ -29550,11 +30131,12 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/9.0.82": {
+      "Microsoft.Maui.Graphics/9.0.120": {
         "type": "package",
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.3.2",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.1"
+          "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+          "Microsoft.WindowsAppSDK": "1.7.250909003"
         },
         "compile": {
           "lib/net9.0-windows10.0.19041/Microsoft.Maui.Graphics.dll": {
@@ -29607,7 +30189,7 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.7.250513003": {
+      "Microsoft.WindowsAppSDK/1.7.250909003": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2903.40",
@@ -29739,6 +30321,25 @@
     }
   },
   "libraries": {
+    "Blazor.Extensions.Canvas/1.1.1": {
+      "sha512": "G+ElSm24MPj3iU2adehrRbVEFQtIR8NPH5M9oBq+RhJ1/Bvit8z6CTaUTVkfiuhgmFVZKJ56D1OdnbZ0u1/lQQ==",
+      "type": "package",
+      "path": "blazor.extensions.canvas/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazor.extensions.canvas.1.1.1.nupkg.sha512",
+        "blazor.extensions.canvas.nuspec",
+        "build/Blazor.Extensions.Canvas.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazor.Extensions.Canvas.props",
+        "buildTransitive/Blazor.Extensions.Canvas.props",
+        "lib/netstandard2.1/Blazor.Extensions.Canvas.JS.dll",
+        "lib/netstandard2.1/Blazor.Extensions.Canvas.dll",
+        "lib/netstandard2.1/Blazor.Extensions.Canvas.pdb",
+        "staticwebassets/blazor.extensions.canvas.js"
+      ]
+    },
     "GoogleGson/2.13.0.1": {
       "sha512": "7dxQ5gnwWrezEUrtpUvDWTOOT0ymn7uejtbceF6djAtdBaqrxbzna6r8eGxQe2T4M09Ozpuz4P0LiV8/jgLBQQ==",
       "type": "package",
@@ -31113,10 +31714,10 @@
         "microsoft.maui.core.nuspec"
       ]
     },
-    "Microsoft.Maui.Essentials/9.0.82": {
-      "sha512": "9mOHlDaJzNIii61wM6/jIGJ0SGEu2CTZjThcQRsALP1JeMEYMAqA5WMHqHAw2aR15sJqTSTnijjHA4wRL7MPUg==",
+    "Microsoft.Maui.Essentials/9.0.120": {
+      "sha512": "chK7ODdFVc3mOHUZMoRgGuVIoWuoC1lIape7OHExLc3jxmd7699J6xFnljyjz1XLYgdTW9l9b0KGVmPnaWWChw==",
       "type": "package",
-      "path": "microsoft.maui.essentials/9.0.82",
+      "path": "microsoft.maui.essentials/9.0.120",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -31152,14 +31753,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Essentials.dll",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.xml",
-        "microsoft.maui.essentials.9.0.82.nupkg.sha512",
+        "microsoft.maui.essentials.9.0.120.nupkg.sha512",
         "microsoft.maui.essentials.nuspec"
       ]
     },
-    "Microsoft.Maui.Graphics/9.0.82": {
-      "sha512": "UcKU5WdAFly1f2JjKw2dW5nEx3PTHiTuBu5CcCp/Tuc7YjV14MtOBYCczlWqVZncrPtkqnHIe9yK7ew5/e6Ozw==",
+    "Microsoft.Maui.Graphics/9.0.120": {
+      "sha512": "M/b+H+RBdBbZlTr9O6sz2fi2EqwmNZvCf0kdnCfJezVCO81Pilythh84GMtAvcvtVo7W4F8VeafSygm09ZjRYg==",
       "type": "package",
-      "path": "microsoft.maui.graphics/9.0.82",
+      "path": "microsoft.maui.graphics/9.0.120",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -31197,7 +31798,7 @@
         "lib/netstandard2.1/Microsoft.Maui.Graphics.dll",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.xml",
-        "microsoft.maui.graphics.9.0.82.nupkg.sha512",
+        "microsoft.maui.graphics.9.0.120.nupkg.sha512",
         "microsoft.maui.graphics.nuspec"
       ]
     },
@@ -31617,10 +32218,10 @@
         "schemas/10.0.22621.0/winrt/UapManifestSchema_v8.xsd"
       ]
     },
-    "Microsoft.WindowsAppSDK/1.7.250513003": {
-      "sha512": "K5QqtDmMEa6Jy2PLAXKj9XWZoldG21IX5+TPe2XjxtNL/xLlciaqlOe22mjyET26Ry0gEVw0xOaQcpwtLCbMog==",
+    "Microsoft.WindowsAppSDK/1.7.250909003": {
+      "sha512": "zeVFVrkFYPkAL1cmXo62D1LVC66VqBiMx+WfZ3aDUmizNECCJewMTk0JwjlgYQcIqxqsK1SjF1CeG74TsokWpQ==",
       "type": "package",
-      "path": "microsoft.windowsappsdk/1.7.250513003",
+      "path": "microsoft.windowsappsdk/1.7.250909003",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -32120,7 +32721,7 @@
         "manifests/Microsoft.InteractiveExperiences.manifest",
         "manifests/Microsoft.WindowsAppSdk.Foundation.manifest",
         "manifests/manifests/Microsoft.WindowsAppSdk.WinUI.manifest",
-        "microsoft.windowsappsdk.1.7.250513003.nupkg.sha512",
+        "microsoft.windowsappsdk.1.7.250909003.nupkg.sha512",
         "microsoft.windowsappsdk.nuspec",
         "runtimes/win-arm64/native/Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll",
         "runtimes/win-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll",
@@ -34051,28 +34652,36 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
+      "Blazor.Extensions.Canvas >= 1.1.1",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 9.0.82",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
+      "Microsoft.Maui.Essentials >= 9.0.120",
       "Microsoft.NET.ILLink.Tasks >= 9.0.9",
       "Xamarin.AndroidX.ViewPager >= 1.1.0.2"
     ],
     "net9.0-ios18.5": [
+      "Blazor.Extensions.Canvas >= 1.1.1",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 9.0.82",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
+      "Microsoft.Maui.Essentials >= 9.0.120",
       "Microsoft.NET.ILLink.Tasks >= 9.0.9"
     ],
     "net9.0-maccatalyst18.5": [
+      "Blazor.Extensions.Canvas >= 1.1.1",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 9.0.82",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
+      "Microsoft.Maui.Essentials >= 9.0.120",
       "Microsoft.NET.ILLink.Tasks >= 9.0.9"
     ],
     "net9.0-windows10.0.19041": [
+      "Blazor.Extensions.Canvas >= 1.1.1",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 9.0.82",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
-      "Microsoft.Maui.Controls >= 9.0.82"
+      "Microsoft.Maui.Controls >= 9.0.82",
+      "Microsoft.Maui.Essentials >= 9.0.120"
     ]
   },
   "packageFolders": {
@@ -34142,6 +34751,10 @@
       "net9.0-android35.0": {
         "targetAlias": "net9.0-android",
         "dependencies": {
+          "Blazor.Extensions.Canvas": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[9.0.82, )"
@@ -34153,6 +34766,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Microsoft.Maui.Essentials": {
+            "target": "Package",
+            "version": "[9.0.120, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -34189,6 +34806,10 @@
       "net9.0-ios18.5": {
         "targetAlias": "net9.0-ios",
         "dependencies": {
+          "Blazor.Extensions.Canvas": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[9.0.82, )"
@@ -34200,6 +34821,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Microsoft.Maui.Essentials": {
+            "target": "Package",
+            "version": "[9.0.120, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -34232,6 +34857,10 @@
       "net9.0-maccatalyst18.5": {
         "targetAlias": "net9.0-maccatalyst",
         "dependencies": {
+          "Blazor.Extensions.Canvas": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[9.0.82, )"
@@ -34243,6 +34872,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Microsoft.Maui.Essentials": {
+            "target": "Package",
+            "version": "[9.0.120, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -34276,6 +34909,10 @@
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
         "dependencies": {
+          "Blazor.Extensions.Canvas": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[9.0.82, )"
@@ -34287,6 +34924,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Microsoft.Maui.Essentials": {
+            "target": "Package",
+            "version": "[9.0.120, )"
           }
         },
         "imports": [

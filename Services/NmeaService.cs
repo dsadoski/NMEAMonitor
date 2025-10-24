@@ -25,6 +25,7 @@ namespace NMEAMon.Services
         public Record ParseSentence(string message)
         {
 
+            CalcWind = false;
             record.ErrMessage = string.Empty;
             if (message.Length < 4) return record.Copy();
             if (message[0] != '$') return record.Copy();
@@ -105,20 +106,12 @@ namespace NMEAMon.Services
 
 
 
+            if (CalcWind)
+            {
+                record = CalculateWind(record);
+            }
 
 
-            // ADD RMC Sentence
-            //if(FRAGACTIVE==FRAG1.POSITION)
-
-
-            //FRAG1.UpdateNumbers();
-
-
-
-            /*FD.ShowData();
-
-                FW.ShowData();*/
-            // VTG Course over ground;
             return record;
 
 
@@ -473,6 +466,115 @@ namespace NMEAMon.Services
             record.voltage = DoubleGet(stray[1]);
             return record.Copy();
         }
-    }
 
+        public Record CalculateWind(Record record)
+        {
+            double AWS; // apparent wind speed
+            double AWA; // apparent wind angle
+            double TWS; // true wind speed
+            double TWA; // true wind angle
+            double HDG = 0; // vessel heading
+            double SOG = 0; // vessel speed over ground
+            AWS = record.windAppSpeed;
+            AWA = record.windAppDir;
+            if (record.headingTrue != 0)
+            {
+                HDG = record.headingTrue;
+            }
+            else if (record.headingMag != 0)
+            {
+                HDG = record.headingMag;
+            }
+            if (record.SOG != 0)
+            {
+                SOG = record.SOG;
+            }
+            else if (record.SOW != 0)
+            {
+                SOG = record.SOW;
+            }
+            double AWArad = AWA * (Math.PI / 180);
+            double HDGrad = HDG * (Math.PI / 180);
+            double Xw = AWS * Math.Sin(AWArad);
+            double Yw = AWS * Math.Cos(AWArad);
+            double Xv = SOG * Math.Sin(HDGrad);
+            double Yv = SOG * Math.Cos(HDGrad);
+            double Xt = Xw + Xv;
+            double Yt = Yw + Yv;
+            TWS = Math.Sqrt((Xt * Xt) + (Yt * Yt));
+            TWA = Math.Atan2(Xt, Yt) * (180 / Math.PI);
+            if (TWA < 0)
+            {
+                TWA += 360;
+            }
+            record.windTrueSpeed = TWS;
+            record.windTrueDir = TWA;
+            record.windTrueCompass = (HDG + TWA) % 360;
+            return record.Copy();
+        }
+
+        private const double EarthRadiusNm = 3440.065; // Earth radius in nautical miles
+
+        public double CalcDistanceNM(
+            Location L1,
+            Location L2)
+        {
+            // Convert degrees to radians
+            double lat1Rad = DegreesToRadians(L1.Latitude);
+            double lon1Rad = DegreesToRadians(L1.Longitude);
+            double lat2Rad = DegreesToRadians(L2.Latitude);
+            double lon2Rad = DegreesToRadians(L2.Longitude);
+
+            // Differences
+            double dLat = lat2Rad - lat1Rad;
+            double dLon = lon2Rad - lon1Rad;
+
+            // Haversine formula
+            double a = Math.Pow(Math.Sin(dLat / 2), 2) +
+                       Math.Cos(lat1Rad) * Math.Cos(lat2Rad) *
+                       Math.Pow(Math.Sin(dLon / 2), 2);
+
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double distanceNm = EarthRadiusNm * c;
+
+            return distanceNm;
+        }
+
+
+        public double CalcBearing(
+        Location A,
+        Location B)
+        {
+            // Convert degrees to radians
+            double lat1Rad = DegreesToRadians(A.Latitude);
+            double lon1Rad = DegreesToRadians(A.Longitude);
+            double lat2Rad = DegreesToRadians(B.Latitude);
+            double lon2Rad = DegreesToRadians(B.Longitude);
+
+            // Difference in longitude
+            double dLon = lon2Rad - lon1Rad;
+
+            // Compute bearing
+            double x = Math.Sin(dLon) * Math.Cos(lat2Rad);
+            double y = Math.Cos(lat1Rad) * Math.Sin(lat2Rad) -
+                       Math.Sin(lat1Rad) * Math.Cos(lat2Rad) * Math.Cos(dLon);
+
+            double initialBearingRad = Math.Atan2(x, y);
+
+            // Convert to degrees and normalize to 0-360
+            double initialBearingDeg = (RadiansToDegrees(initialBearingRad) + 360) % 360;
+
+            return initialBearingDeg;
+        }
+
+        private static double DegreesToRadians(double degrees) =>
+            degrees * Math.PI / 180.0;
+
+        private static double RadiansToDegrees(double radians) =>
+            radians * 180.0 / Math.PI;
+
+
+    }
 }
+
+

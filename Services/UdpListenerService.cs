@@ -19,6 +19,7 @@ namespace NMEAMon.Services
         public event Action<Record>? OnMessageReceived;
         Setup  setup = new Setup();
         Record record;
+        bool isInitialized = false;
 
         public UdpListenerService(int port)
         {
@@ -27,10 +28,13 @@ namespace NMEAMon.Services
 
         public void Start()
         {
+            if(isInitialized ==true)
+            {
+                return;
+            }
+            isInitialized = true;
             _cts = new CancellationTokenSource();
             _udpClient = new UdpClient(_port);
-
-            //N2KService n2KService = new N2KService();
             NmeaService nmeaService = new NmeaService(setup);
 
 

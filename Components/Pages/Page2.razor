@@ -1,5 +1,134 @@
-﻿<h3>Page1</h3>
-<p>This is the second page.</p>
+﻿@using NMEAMon.Models
+@using NMEAMon.Services
+@inject UdpListenerService UdpService
+@inject NmeaService nmeaService;
+@inject GPSService gpsService;
+
+<div class="my-grid-container">
+   <!-- <MyBlazorComponent1 />
+    <MyBlazorComponent2 /> -->
+    <div class="grid-item-1">
+        <p style="text-align:center" >Heading</p>
+        <h3 style="text-align:right">@($"{record.COG:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">Speed Water</p>
+        <h3 style="text-align:right">@($"{record.SOW:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">Speed Ground</p>
+        <h3 style="text-align:right">@($"{record.SOG:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">Depth</p>
+        <h3 style="text-align:right">@($"{record.depth:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">AWS</p>
+        <h3 style="text-align:right">@($"{record.windAppSpeed:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">AWD</p>
+        <h3 style="text-align:right">@($"{record.windAppDir:F2}")</h3>
+    </div>
+
+    <div class="grid-item-1">
+        <p style="text-align:center">TWS</p>
+        <h3 style="text-align:right">@($"{record.windTrueSpeed:F2}")</h3>
+    </div>
+    <div class="grid-item-1">
+        <p style="text-align:center">TWD</p>
+        <h3 style="text-align:right">@($"{record.windTrueDir:F2}")</h3>
+    </div
+     <div class="grid-item-4">
+        <p style="text-align:center">WindRose</p>
+        
+    </div>
+</div>
+
+<style>
+    .my-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Three columns: first and third equal, second twice as wide */
+        grid-template-rows: auto auto; /* Two rows, height determined by content */
+        gap: 5px; /* Space between grid items */
+    }
+
+        .my-grid-container > * {
+            border: 1px solid black;
+            /*padding: 5px; /* optional: space inside each box */
+            box-sizing: border-box; /* ensures borders don’t mess up layout */
+        }
+
+    .grid-item-4 {
+        grid-column: 1 / span 4; /* Starts in column 2, spans 2 columns */
+    }
+</style>
 @code {
 
+    private Record record;
+    private NmeaService nmea;
+    protected override void OnInitialized()
+    {
+        nmea = new NmeaService(new Setup());
+        record = new Record();
+        UdpService.OnMessageReceived += HandleUdpMessage;
+        UdpService.Start();
+
+        gpsService.OnLocationReceived += HandleGpsLocation;
+        gpsService.Start();
+    }
+    private void HandleUdpMessage(Record n2krecord)
+    {
+        InvokeAsync(() =>
+        {
+            record = n2krecord;
+            //messages.Add(msg);
+            StateHasChanged();
+        });
+    }
+
+    private void HandleGpsLocation(Location location)
+    {
+        InvokeAsync(() =>
+        {
+            record.latitude = location.Latitude;
+            record.longitude = location.Longitude;
+            record.SOG = location.Speed ?? 0.0; // Fixes CS0266 and CS8629
+            record.SOG = record.SOG * 1.94384; // Convert m/s to knots
+            record.COG = location.Course ?? 0.0; // Fixes CS0266 and CS8629
+
+            if (record.location == null)
+            {
+                record.location = location;
+            }
+
+            // can we calc COG/SOG from  2 points?
+            TimeSpan timeSpan = new TimeSpan(location.Timestamp.Ticks - record.location.Timestamp.Ticks);
+            // can we calc COG/SOG from  2 points?
+
+
+            if (timeSpan.TotalSeconds > 5)
+            {
+                double distance = nmea.CalcDistanceNM(record.location, location); // in nautical miles
+                record.SOG = distance / (timeSpan.TotalSeconds / 3600.0); // knots
+                double bearing = nmea.CalcBearing(record.location, location);
+                record.headingTrue = bearing;
+                record.COG = bearing;
+
+                record.location = location;
+                record = nmea.CalculateWind(record);
+            }
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose()
+    {
+        UdpService.OnMessageReceived -= HandleUdpMessage;
+        //UdpService.Stop();
+
+        gpsService.OnLocationReceived -= HandleGpsLocation;
+        //gpsService.Stop();
+    }
 }

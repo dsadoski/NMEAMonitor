@@ -21,12 +21,15 @@ namespace NMEAMon
 
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddSingleton(sp => new UdpListenerService(port: 10110));
+            builder.Services.AddSingleton(sp => new GPSService());
             builder.Services.AddTransient(sp => new NmeaService(setup));
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
+
+            
 
             return builder.Build();
         }

@@ -1,29 +1,73 @@
 ﻿@using Microsoft.AspNetCore.Components
-@code {
-    private int currentPage = 0;
+@using System.Reflection.Metadata
 
-    private readonly Type[] pages = new[]
-    {
-        typeof(Page1),
-        typeof(Page2),
-        typeof(Page3)
-    };
-
-    void NextPage()
-    {
-        currentPage = (currentPage + 1) % pages.Length;
-    }
-
-    void PrevPage()
-    {
-        currentPage = (currentPage - 1 + pages.Length) % pages.Length;
-    }
-}
 
 <div style="text-align: center;">
-    <button @onclick="PrevPage">⬅️</button>
+@if (PrevButtonVisible)
+    {
+        <button   @onclick="PrevPage">⬅️</button>
+    }
     <span style="margin: 0 1rem;">Page @((currentPage + 1))</span>
-    <button @onclick="NextPage">➡️</button>
+    @if (NextButtonVisible)
+    {
+        <button @onclick="NextPage">➡️</button>
+    }
+    
 </div>
 
 <DynamicComponent Type="@pages[currentPage]" />
+
+
+@code {
+    private int currentPage = 0;
+    bool PrevButtonVisible = true;
+    bool NextButtonVisible = true;
+    private readonly Type[] pages = new[]
+    {
+        typeof(Page2),
+        typeof(Page1),
+        typeof(Page3)
+    };
+    protected override void OnInitialized()
+    {
+        ShowButtons();
+    }
+    void NextPage()
+    {
+        if ((currentPage + 1) < pages.Length)
+        {
+            currentPage = (currentPage + 1);
+        }
+        ShowButtons();
+    }
+    void PrevPage()
+    {
+        if ((currentPage - 1 + pages.Length) >= 0)
+        {
+            currentPage = currentPage - 1;
+        }
+        ShowButtons();
+    }
+
+    void ShowButtons()
+    {
+        if(currentPage >0)
+        {
+            PrevButtonVisible = true;
+        }
+        else
+        {
+            PrevButtonVisible = false;
+        }
+        if(currentPage < (pages.Length -1))
+        {
+            NextButtonVisible = true;
+        }
+        else
+        {
+            NextButtonVisible = false;
+        }
+    }
+}
+
+

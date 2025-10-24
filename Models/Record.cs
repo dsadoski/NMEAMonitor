@@ -25,6 +25,7 @@ namespace NMEAMon.Models
         public double SOW;
         public double windTrueDir;
         public double windTrueSpeed;
+        public double windTrueCompass;
         public double windAppDir;
         public double windAppSpeed;
         public double VPWSPD;
@@ -32,6 +33,7 @@ namespace NMEAMon.Models
         public double waterTemp;
         public double voltage;
         public string ErrMessage;
+        public Location location;
 
 
 
@@ -53,12 +55,14 @@ namespace NMEAMon.Models
             SOW = 0;
             windTrueDir = 0;
             windTrueSpeed = 0;
+            windTrueCompass = 0;    
             windAppDir = 0;
             windAppSpeed = 0;
             VPWSPD = 0;
             POLARDATA = 0;
-            waterTemp=0;
-            voltage= 0;
+            waterTemp= 0;
+            voltage = 0;
+            location = new Location();
 
 
         }
@@ -80,13 +84,14 @@ namespace NMEAMon.Models
             P.SOW = SOW;
             P.windTrueDir = windTrueDir;
             P.windTrueSpeed = windTrueSpeed;
+            P.windTrueCompass = windTrueCompass;
             P.windAppDir = windAppDir;
             P.windAppSpeed = windAppSpeed;
             P.VPWSPD = VPWSPD;
             P.ErrMessage = ErrMessage;
             P.waterTemp = waterTemp;
             P.voltage = voltage;
-
+            P.location = location;
             return P;
 
         }
